@@ -1,0 +1,24 @@
+#status.success{
+    text-align: center;
+    background-color: rgb(211, 250, 153);
+}
+#status.success{
+    text-align: center;
+    color: white;
+    background-color: rgb(219, 42, 80);
+    animation: status 4s  ease  forwards;
+}
+@keyframes status {
+    0%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    90%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}

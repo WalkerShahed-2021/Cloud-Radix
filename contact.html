@@ -1,0 +1,109 @@
+<html amp lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>AMP</title>
+  <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="contact-form-top">
+    <div class="cr-col-lg-12 cr-col-md-12 cr-col-sm-12 contact-flex">
+      <div class="separater-1">
+        <a href="/../..">
+          <amp-img src="/header-logo.svg" layout="responsive" height="44" width="176.85" alt="Cloud Radix logo"
+            class="placeholder-loader logo-3">
+            <div placeholder="" class="placeholder">
+              <div class="radix-spinner">
+                <em></em>
+                <em></em>
+                <em></em>
+              </div>
+            </div>
+          </amp-img>
+        </a>
+      </div>
+      <div class="separater-3">
+        <button on="tap:AMP.goBack(navigate=true)" style="border: none; background-color: transparent;">
+          <amp-img src="/x.svg" layout="responsive" height="20" width="20" alt="Cloud Radix logo"
+            class="placeholder-loader x">
+            <div placeholder="" class="placeholder">
+              <div class="radix-spinner">
+                <em></em>
+                <em></em>
+                <em></em>
+              </div>
+            </div>
+          </amp-img>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section class="contact-form cr-flex cr-jc-c">
+    <div class="ac-col">
+      <h1>GET IN TOUCH</h1>
+      <div class="form-card">
+        <h2>Who are you?</h2>
+        <hr>
+        <form method="POST" id="my-form"  action-xhr="placeholder"
+          custom-validation-reporting="show-all-on-submit" target="_top">
+          <fieldset class="fieldset">
+            <label>
+              <input type="text" name="name" placeholder="Name" required class="field" id="name5" pattern="\w+\s\w+">
+              <span visible-when-invalid="patternMismatch" validation-for="name5"><br>Please enter your first and last
+                name separated by a space (e.g. Joe Miller)
+              </span>
+            </label>
+            <hr>
+            <label>
+              <input type="tel" name="phone" id="phone" placeholder="Phone" required class="field">
+            </label>
+            <hr>
+            <label>
+              <input type="email" name="email" id="email" placeholder="Email" required class="field">
+            </label>
+            <hr>
+            <label>
+              <input type="text" name="company" id="company" placeholder="Company" required class="field">
+            </label>
+            <hr>
+            <div class="cr-flex cr-jc-c">
+              <input type="submit" value="Submit" id="submit" class="btn btn-success display-7"
+                style="font-size: 1.1rem;">
+            </div>
+            <br>
+          </fieldset>
+          <div submit-success>
+            <template type="amp-mustache">
+              Thank you for contacting Cloud Radix. Your form submission was successful! Please check your email to
+              confirm and a Baril associate will be in touch soon. <a href="/../..">Click here to return to homepage</a>
+            </template>
+          </div>
+          <div submit-error>
+            <template type="amp-mustache">
+              Submission failed, if issue persists please contact us at <a href="tel:+1-260-665-8431">+1
+                260-577-3009</a> or <a href="mailto:kbutton@cloudradix.com">kbutton@cloudradix.com</a>
+            </template>
+          </div>
+        </form>
+      </div>
+      <div class="cr-flex cr-jc-r bottom-stuff">
+      </div>
+      <div id="status" class="success"></div>
+    </div>
+  </section>
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+  action="https://formspree.io/f/xoqrddvy"
+ -->
