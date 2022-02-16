@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Poppins:ital,wght@0,300;0,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 #status.success{
     text-align: center;
     background-color: rgb(211, 250, 153);
@@ -21,4 +30,56 @@
         opacity: 0;
         pointer-events: none;
     }
+}
+/* .contact-form{
+   text-align: center;
+   background-color: bisque;
+} */
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4070f4;
+}
+.container{
+    position: relative;
+    max-width: 500px;
+    height: 700px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow:  0 5px 10px rgb(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.contact-form{
+   padding:  40px;
+   box-shadow:  0 8px 80px rgb(0, 0, 0, 0.3);
+}
+.contact-form .fieldset{
+   padding:  15px;
+   
+}
+.fieldset{
+    margin-top: 20px;
+}
+ .field{
+    position: relative;
+    height:  50px;
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 2px ;
+}
+.fields{
+    position: relative;
+    height:  50px;
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 2px ;
+    background-color: green;
+    color: #fff;
+    box-shadow:  0 8px 80px rgb(0, 0, 0, 0);
+    font-size: large;
+}
+.h1-size{
+    color: rgb(163, 100, 24);
 }

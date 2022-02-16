@@ -1,14 +1,42 @@
-/* // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+var form = document.getElementById("my-form");
 
-// Your web app's Firebase configuration
+// function success (){
+//     status.innerHTML = 'Thanks';
+// }
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                    status.innerHTML = "Oops! There was a problem submitting your form"
+                }
+            })
+        }
+    }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+    alert('Your Form has been submitted successfully');
+}
+form.addEventListener("submit", handleSubmit)
 
 
- */
 
-//unique firebase object
+/* //unique firebase object
 const firebaseConfig = {
     apiKey: "AIzaSyC7mh8cGTnx-sC69OpaK2pjWPRJr970zdc",
     authDomain: "cloudradix-project.firebaseapp.com",
@@ -49,4 +77,4 @@ submitutton.addEventListener('click', (e) => {
     })
 
     alert('Your Form has been submitted successfully');
-})
+}) */
